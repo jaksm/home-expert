@@ -1,0 +1,18 @@
+overwrite: true
+schema: 'http://localhost:4001/graphql'
+documents: '../web-react-ts/**/*.graphql'
+generates:
+  ../web-react-ts/src/API.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+    config:
+      avoidOptionals: true
+      flattenGeneratedTypes: true
+  ./graphql.schema.json:
+    plugins:
+      - 'introspection'
+    config:
+      schemaDescription: true
+      minify: true

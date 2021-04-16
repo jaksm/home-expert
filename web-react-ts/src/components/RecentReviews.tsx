@@ -5,28 +5,11 @@ import TableCell from '@material-ui/core/TableCell'
 import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import Title from './Title'
-import { useQuery, gql } from '@apollo/client';
-
-const GET_RECENT_REVIEWS_QUERY = gql`
-  {
-    Review(first: 10, orderBy: date_desc) {
-      user {
-        name
-      }
-      business {
-        name
-      }
-      date {
-        formatted
-      }
-      text
-      stars
-    }
-  }
-`
+import { useRecentReviewsQuery } from '../API'
 
 export default function RecentReviews() {
-  const { loading, error, data } = useQuery(GET_RECENT_REVIEWS_QUERY)
+  const { loading, error, data } = useRecentReviewsQuery()
+
   if (error) return <p>Error</p>
   if (loading) return <p>Loading</p>
 
@@ -44,7 +27,7 @@ export default function RecentReviews() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.Review.map((row: any) => (
+          {data?.Review?.map((row: any) => (
             <TableRow key={row.id}>
               <TableCell>{row.date.formatted}</TableCell>
               <TableCell>{row.business.name}</TableCell>

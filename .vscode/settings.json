@@ -1,9 +1,11 @@
 {
   "git.ignoreLimitWarning": true,
-  "editor.formatOnSave": true,
   "prettier.prettierPath": "node_modules/prettier/index.js",
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": true,
+    "source.organizeImports": true
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.colorTheme": "Noctis Uva"
 }

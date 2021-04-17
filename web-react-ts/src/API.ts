@@ -23,509 +23,497 @@ export type Scalars = {
 
 
 
-export type _AddUserReviewsPayload = {
-  __typename?: '_AddUserReviewsPayload';
-  /** Field for the User node this WROTE [relationship](https://grandstack.io/docs/graphql-relationship-types) is coming from. */
-  from: Maybe<User>;
-  /** Field for the Review node this WROTE [relationship](https://grandstack.io/docs/graphql-relationship-types) is going to. */
-  to: Maybe<Review>;
+export type _PropertyInput = {
+  buildingValue: Scalars['Int'];
 };
 
-export type _RemoveUserReviewsPayload = {
-  __typename?: '_RemoveUserReviewsPayload';
-  /** Field for the User node this WROTE [relationship](https://grandstack.io/docs/graphql-relationship-types) is coming from. */
-  from: Maybe<User>;
-  /** Field for the Review node this WROTE [relationship](https://grandstack.io/docs/graphql-relationship-types) is going to. */
-  to: Maybe<Review>;
-};
-
-export type _MergeUserReviewsPayload = {
-  __typename?: '_MergeUserReviewsPayload';
-  /** Field for the User node this WROTE [relationship](https://grandstack.io/docs/graphql-relationship-types) is coming from. */
-  from: Maybe<User>;
-  /** Field for the Review node this WROTE [relationship](https://grandstack.io/docs/graphql-relationship-types) is going to. */
-  to: Maybe<Review>;
-};
-
-export type _UserInput = {
-  userId: Scalars['ID'];
-};
-
-export enum _UserOrdering {
-  UserIdAsc = 'userId_asc',
-  UserIdDesc = 'userId_desc',
-  NameAsc = 'name_asc',
-  NameDesc = 'name_desc',
-  AvgStarsAsc = 'avgStars_asc',
-  AvgStarsDesc = 'avgStars_desc',
-  NumReviewsAsc = 'numReviews_asc',
-  NumReviewsDesc = 'numReviews_desc',
+export enum _PropertyOrdering {
+  AddressLineAsc = 'addressLine_asc',
+  AddressLineDesc = 'addressLine_desc',
+  AddressLine1Asc = 'addressLine1_asc',
+  AddressLine1Desc = 'addressLine1_desc',
+  AssessmentAsc = 'assessment_asc',
+  AssessmentDesc = 'assessment_desc',
+  BuildingValueAsc = 'buildingValue_asc',
+  BuildingValueDesc = 'buildingValue_desc',
+  CertificateAsc = 'certificate_asc',
+  CertificateDesc = 'certificate_desc',
+  CityStateAsc = 'cityState_asc',
+  CityStateDesc = 'cityState_desc',
+  ContinuousAsc = 'continuous_asc',
+  ContinuousDesc = 'continuous_desc',
+  CountyAbbreviationAsc = 'countyAbbreviation_asc',
+  CountyAbbreviationDesc = 'countyAbbreviation_desc',
+  CountyNameAsc = 'countyName_asc',
+  CountyNameDesc = 'countyName_desc',
+  FarmsiteAreaAsc = 'farmsiteArea_asc',
+  FarmsiteAreaDesc = 'farmsiteArea_desc',
+  ForestAreaAsc = 'forestArea_asc',
+  ForestAreaDesc = 'forestArea_desc',
+  GeometryAreaAsc = 'geometryArea_asc',
+  GeometryAreaDesc = 'geometryArea_desc',
+  GeometryLengthAsc = 'geometryLength_asc',
+  GeometryLengthDesc = 'geometryLength_desc',
+  GeometryTypeAsc = 'geometryType_asc',
+  GeometryTypeDesc = 'geometryType_desc',
+  GrazingAreaAsc = 'grazingArea_asc',
+  GrazingAreaDesc = 'grazingArea_desc',
+  IrrigatedAreaAsc = 'irrigatedArea_asc',
+  IrrigatedAreaDesc = 'irrigatedArea_desc',
+  LandValueAsc = 'landValue_asc',
+  LandValueDesc = 'landValue_desc',
+  LegalDescriptionAsc = 'legalDescription_asc',
+  LegalDescriptionDesc = 'legalDescription_desc',
+  LevyDistrictAsc = 'levyDistrict_asc',
+  LevyDistrictDesc = 'levyDistrict_desc',
+  NonQualityAreaAsc = 'nonQualityArea_asc',
+  NonQualityAreaDesc = 'nonQualityArea_desc',
+  OwnerAddressAsc = 'ownerAddress_asc',
+  OwnerAddressDesc = 'ownerAddress_desc',
+  OwnerAddressLine1Asc = 'ownerAddressLine1_asc',
+  OwnerAddressLine1Desc = 'ownerAddressLine1_desc',
+  OwnerAddressLine2Asc = 'ownerAddressLine2_asc',
+  OwnerAddressLine2Desc = 'ownerAddressLine2_desc',
+  OwnerCityAsc = 'ownerCity_asc',
+  OwnerCityDesc = 'ownerCity_desc',
+  OwnerNameAsc = 'ownerName_asc',
+  OwnerNameDesc = 'ownerName_desc',
+  OwnerStateAsc = 'ownerState_asc',
+  OwnerStateDesc = 'ownerState_desc',
+  OwnerZipAsc = 'ownerZip_asc',
+  OwnerZipDesc = 'ownerZip_desc',
+  PropertyIdAsc = 'propertyID_asc',
+  PropertyIdDesc = 'propertyID_desc',
+  RangeAsc = 'range_asc',
+  RangeDesc = 'range_desc',
+  SectionAsc = 'section_asc',
+  SectionDesc = 'section_desc',
+  SubdivisionAsc = 'subdivision_asc',
+  SubdivisionDesc = 'subdivision_desc',
+  TaxYearAsc = 'taxYear_asc',
+  TaxYearDesc = 'taxYear_desc',
+  TotalAreaAsc = 'totalArea_asc',
+  TotalAreaDesc = 'totalArea_desc',
+  TotalValueAsc = 'totalValue_asc',
+  TotalValueDesc = 'totalValue_desc',
+  TownshipAsc = 'township_asc',
+  TownshipDesc = 'township_desc',
+  TypeAsc = 'type_asc',
+  TypeDesc = 'type_desc',
+  WildHayAreaAsc = 'wildHayArea_asc',
+  WildHayAreaDesc = 'wildHayArea_desc',
   IdAsc = '_id_asc',
   IdDesc = '_id_desc'
 }
 
-export type _UserFilter = {
-  AND: Maybe<Array<_UserFilter>>;
-  OR: Maybe<Array<_UserFilter>>;
-  userId: Maybe<Scalars['ID']>;
-  userId_not: Maybe<Scalars['ID']>;
-  userId_in: Maybe<Array<Scalars['ID']>>;
-  userId_not_in: Maybe<Array<Scalars['ID']>>;
-  userId_regexp: Maybe<Scalars['ID']>;
-  userId_contains: Maybe<Scalars['ID']>;
-  userId_not_contains: Maybe<Scalars['ID']>;
-  userId_starts_with: Maybe<Scalars['ID']>;
-  userId_not_starts_with: Maybe<Scalars['ID']>;
-  userId_ends_with: Maybe<Scalars['ID']>;
-  userId_not_ends_with: Maybe<Scalars['ID']>;
-  name: Maybe<Scalars['String']>;
-  name_not: Maybe<Scalars['String']>;
-  name_in: Maybe<Array<Scalars['String']>>;
-  name_not_in: Maybe<Array<Scalars['String']>>;
-  name_regexp: Maybe<Scalars['String']>;
-  name_contains: Maybe<Scalars['String']>;
-  name_not_contains: Maybe<Scalars['String']>;
-  name_starts_with: Maybe<Scalars['String']>;
-  name_not_starts_with: Maybe<Scalars['String']>;
-  name_ends_with: Maybe<Scalars['String']>;
-  name_not_ends_with: Maybe<Scalars['String']>;
-  reviews: Maybe<_ReviewFilter>;
-  reviews_not: Maybe<_ReviewFilter>;
-  reviews_in: Maybe<Array<_ReviewFilter>>;
-  reviews_not_in: Maybe<Array<_ReviewFilter>>;
-  reviews_some: Maybe<_ReviewFilter>;
-  reviews_none: Maybe<_ReviewFilter>;
-  reviews_single: Maybe<_ReviewFilter>;
-  reviews_every: Maybe<_ReviewFilter>;
+export type _PropertyFilter = {
+  AND: Maybe<Array<_PropertyFilter>>;
+  OR: Maybe<Array<_PropertyFilter>>;
+  addressLine: Maybe<Scalars['String']>;
+  addressLine_not: Maybe<Scalars['String']>;
+  addressLine_in: Maybe<Array<Scalars['String']>>;
+  addressLine_not_in: Maybe<Array<Scalars['String']>>;
+  addressLine_regexp: Maybe<Scalars['String']>;
+  addressLine_contains: Maybe<Scalars['String']>;
+  addressLine_not_contains: Maybe<Scalars['String']>;
+  addressLine_starts_with: Maybe<Scalars['String']>;
+  addressLine_not_starts_with: Maybe<Scalars['String']>;
+  addressLine_ends_with: Maybe<Scalars['String']>;
+  addressLine_not_ends_with: Maybe<Scalars['String']>;
+  addressLine1: Maybe<Scalars['String']>;
+  addressLine1_not: Maybe<Scalars['String']>;
+  addressLine1_in: Maybe<Array<Scalars['String']>>;
+  addressLine1_not_in: Maybe<Array<Scalars['String']>>;
+  addressLine1_regexp: Maybe<Scalars['String']>;
+  addressLine1_contains: Maybe<Scalars['String']>;
+  addressLine1_not_contains: Maybe<Scalars['String']>;
+  addressLine1_starts_with: Maybe<Scalars['String']>;
+  addressLine1_not_starts_with: Maybe<Scalars['String']>;
+  addressLine1_ends_with: Maybe<Scalars['String']>;
+  addressLine1_not_ends_with: Maybe<Scalars['String']>;
+  assessment: Maybe<Scalars['String']>;
+  assessment_not: Maybe<Scalars['String']>;
+  assessment_in: Maybe<Array<Scalars['String']>>;
+  assessment_not_in: Maybe<Array<Scalars['String']>>;
+  assessment_regexp: Maybe<Scalars['String']>;
+  assessment_contains: Maybe<Scalars['String']>;
+  assessment_not_contains: Maybe<Scalars['String']>;
+  assessment_starts_with: Maybe<Scalars['String']>;
+  assessment_not_starts_with: Maybe<Scalars['String']>;
+  assessment_ends_with: Maybe<Scalars['String']>;
+  assessment_not_ends_with: Maybe<Scalars['String']>;
+  buildingValue: Maybe<Scalars['Int']>;
+  buildingValue_not: Maybe<Scalars['Int']>;
+  buildingValue_in: Maybe<Array<Scalars['Int']>>;
+  buildingValue_not_in: Maybe<Array<Scalars['Int']>>;
+  buildingValue_lt: Maybe<Scalars['Int']>;
+  buildingValue_lte: Maybe<Scalars['Int']>;
+  buildingValue_gt: Maybe<Scalars['Int']>;
+  buildingValue_gte: Maybe<Scalars['Int']>;
+  certificate: Maybe<Scalars['String']>;
+  certificate_not: Maybe<Scalars['String']>;
+  certificate_in: Maybe<Array<Scalars['String']>>;
+  certificate_not_in: Maybe<Array<Scalars['String']>>;
+  certificate_regexp: Maybe<Scalars['String']>;
+  certificate_contains: Maybe<Scalars['String']>;
+  certificate_not_contains: Maybe<Scalars['String']>;
+  certificate_starts_with: Maybe<Scalars['String']>;
+  certificate_not_starts_with: Maybe<Scalars['String']>;
+  certificate_ends_with: Maybe<Scalars['String']>;
+  certificate_not_ends_with: Maybe<Scalars['String']>;
+  cityState: Maybe<Scalars['String']>;
+  cityState_not: Maybe<Scalars['String']>;
+  cityState_in: Maybe<Array<Scalars['String']>>;
+  cityState_not_in: Maybe<Array<Scalars['String']>>;
+  cityState_regexp: Maybe<Scalars['String']>;
+  cityState_contains: Maybe<Scalars['String']>;
+  cityState_not_contains: Maybe<Scalars['String']>;
+  cityState_starts_with: Maybe<Scalars['String']>;
+  cityState_not_starts_with: Maybe<Scalars['String']>;
+  cityState_ends_with: Maybe<Scalars['String']>;
+  cityState_not_ends_with: Maybe<Scalars['String']>;
+  continuous: Maybe<Scalars['Float']>;
+  continuous_not: Maybe<Scalars['Float']>;
+  continuous_in: Maybe<Array<Scalars['Float']>>;
+  continuous_not_in: Maybe<Array<Scalars['Float']>>;
+  continuous_lt: Maybe<Scalars['Float']>;
+  continuous_lte: Maybe<Scalars['Float']>;
+  continuous_gt: Maybe<Scalars['Float']>;
+  continuous_gte: Maybe<Scalars['Float']>;
+  countyAbbreviation: Maybe<Scalars['String']>;
+  countyAbbreviation_not: Maybe<Scalars['String']>;
+  countyAbbreviation_in: Maybe<Array<Scalars['String']>>;
+  countyAbbreviation_not_in: Maybe<Array<Scalars['String']>>;
+  countyAbbreviation_regexp: Maybe<Scalars['String']>;
+  countyAbbreviation_contains: Maybe<Scalars['String']>;
+  countyAbbreviation_not_contains: Maybe<Scalars['String']>;
+  countyAbbreviation_starts_with: Maybe<Scalars['String']>;
+  countyAbbreviation_not_starts_with: Maybe<Scalars['String']>;
+  countyAbbreviation_ends_with: Maybe<Scalars['String']>;
+  countyAbbreviation_not_ends_with: Maybe<Scalars['String']>;
+  countyName: Maybe<Scalars['String']>;
+  countyName_not: Maybe<Scalars['String']>;
+  countyName_in: Maybe<Array<Scalars['String']>>;
+  countyName_not_in: Maybe<Array<Scalars['String']>>;
+  countyName_regexp: Maybe<Scalars['String']>;
+  countyName_contains: Maybe<Scalars['String']>;
+  countyName_not_contains: Maybe<Scalars['String']>;
+  countyName_starts_with: Maybe<Scalars['String']>;
+  countyName_not_starts_with: Maybe<Scalars['String']>;
+  countyName_ends_with: Maybe<Scalars['String']>;
+  countyName_not_ends_with: Maybe<Scalars['String']>;
+  farmsiteArea: Maybe<Scalars['Float']>;
+  farmsiteArea_not: Maybe<Scalars['Float']>;
+  farmsiteArea_in: Maybe<Array<Scalars['Float']>>;
+  farmsiteArea_not_in: Maybe<Array<Scalars['Float']>>;
+  farmsiteArea_lt: Maybe<Scalars['Float']>;
+  farmsiteArea_lte: Maybe<Scalars['Float']>;
+  farmsiteArea_gt: Maybe<Scalars['Float']>;
+  farmsiteArea_gte: Maybe<Scalars['Float']>;
+  forestArea: Maybe<Scalars['Float']>;
+  forestArea_not: Maybe<Scalars['Float']>;
+  forestArea_in: Maybe<Array<Scalars['Float']>>;
+  forestArea_not_in: Maybe<Array<Scalars['Float']>>;
+  forestArea_lt: Maybe<Scalars['Float']>;
+  forestArea_lte: Maybe<Scalars['Float']>;
+  forestArea_gt: Maybe<Scalars['Float']>;
+  forestArea_gte: Maybe<Scalars['Float']>;
+  geometryArea: Maybe<Scalars['Float']>;
+  geometryArea_not: Maybe<Scalars['Float']>;
+  geometryArea_in: Maybe<Array<Scalars['Float']>>;
+  geometryArea_not_in: Maybe<Array<Scalars['Float']>>;
+  geometryArea_lt: Maybe<Scalars['Float']>;
+  geometryArea_lte: Maybe<Scalars['Float']>;
+  geometryArea_gt: Maybe<Scalars['Float']>;
+  geometryArea_gte: Maybe<Scalars['Float']>;
+  geometryLength: Maybe<Scalars['Float']>;
+  geometryLength_not: Maybe<Scalars['Float']>;
+  geometryLength_in: Maybe<Array<Scalars['Float']>>;
+  geometryLength_not_in: Maybe<Array<Scalars['Float']>>;
+  geometryLength_lt: Maybe<Scalars['Float']>;
+  geometryLength_lte: Maybe<Scalars['Float']>;
+  geometryLength_gt: Maybe<Scalars['Float']>;
+  geometryLength_gte: Maybe<Scalars['Float']>;
+  geometryType: Maybe<Scalars['String']>;
+  geometryType_not: Maybe<Scalars['String']>;
+  geometryType_in: Maybe<Array<Scalars['String']>>;
+  geometryType_not_in: Maybe<Array<Scalars['String']>>;
+  geometryType_regexp: Maybe<Scalars['String']>;
+  geometryType_contains: Maybe<Scalars['String']>;
+  geometryType_not_contains: Maybe<Scalars['String']>;
+  geometryType_starts_with: Maybe<Scalars['String']>;
+  geometryType_not_starts_with: Maybe<Scalars['String']>;
+  geometryType_ends_with: Maybe<Scalars['String']>;
+  geometryType_not_ends_with: Maybe<Scalars['String']>;
+  grazingArea: Maybe<Scalars['Float']>;
+  grazingArea_not: Maybe<Scalars['Float']>;
+  grazingArea_in: Maybe<Array<Scalars['Float']>>;
+  grazingArea_not_in: Maybe<Array<Scalars['Float']>>;
+  grazingArea_lt: Maybe<Scalars['Float']>;
+  grazingArea_lte: Maybe<Scalars['Float']>;
+  grazingArea_gt: Maybe<Scalars['Float']>;
+  grazingArea_gte: Maybe<Scalars['Float']>;
+  irrigatedArea: Maybe<Scalars['Float']>;
+  irrigatedArea_not: Maybe<Scalars['Float']>;
+  irrigatedArea_in: Maybe<Array<Scalars['Float']>>;
+  irrigatedArea_not_in: Maybe<Array<Scalars['Float']>>;
+  irrigatedArea_lt: Maybe<Scalars['Float']>;
+  irrigatedArea_lte: Maybe<Scalars['Float']>;
+  irrigatedArea_gt: Maybe<Scalars['Float']>;
+  irrigatedArea_gte: Maybe<Scalars['Float']>;
+  landValue: Maybe<Scalars['Int']>;
+  landValue_not: Maybe<Scalars['Int']>;
+  landValue_in: Maybe<Array<Scalars['Int']>>;
+  landValue_not_in: Maybe<Array<Scalars['Int']>>;
+  landValue_lt: Maybe<Scalars['Int']>;
+  landValue_lte: Maybe<Scalars['Int']>;
+  landValue_gt: Maybe<Scalars['Int']>;
+  landValue_gte: Maybe<Scalars['Int']>;
+  legalDescription: Maybe<Scalars['String']>;
+  legalDescription_not: Maybe<Scalars['String']>;
+  legalDescription_in: Maybe<Array<Scalars['String']>>;
+  legalDescription_not_in: Maybe<Array<Scalars['String']>>;
+  legalDescription_regexp: Maybe<Scalars['String']>;
+  legalDescription_contains: Maybe<Scalars['String']>;
+  legalDescription_not_contains: Maybe<Scalars['String']>;
+  legalDescription_starts_with: Maybe<Scalars['String']>;
+  legalDescription_not_starts_with: Maybe<Scalars['String']>;
+  legalDescription_ends_with: Maybe<Scalars['String']>;
+  legalDescription_not_ends_with: Maybe<Scalars['String']>;
+  levyDistrict: Maybe<Scalars['String']>;
+  levyDistrict_not: Maybe<Scalars['String']>;
+  levyDistrict_in: Maybe<Array<Scalars['String']>>;
+  levyDistrict_not_in: Maybe<Array<Scalars['String']>>;
+  levyDistrict_regexp: Maybe<Scalars['String']>;
+  levyDistrict_contains: Maybe<Scalars['String']>;
+  levyDistrict_not_contains: Maybe<Scalars['String']>;
+  levyDistrict_starts_with: Maybe<Scalars['String']>;
+  levyDistrict_not_starts_with: Maybe<Scalars['String']>;
+  levyDistrict_ends_with: Maybe<Scalars['String']>;
+  levyDistrict_not_ends_with: Maybe<Scalars['String']>;
+  nonQualityArea: Maybe<Scalars['Float']>;
+  nonQualityArea_not: Maybe<Scalars['Float']>;
+  nonQualityArea_in: Maybe<Array<Scalars['Float']>>;
+  nonQualityArea_not_in: Maybe<Array<Scalars['Float']>>;
+  nonQualityArea_lt: Maybe<Scalars['Float']>;
+  nonQualityArea_lte: Maybe<Scalars['Float']>;
+  nonQualityArea_gt: Maybe<Scalars['Float']>;
+  nonQualityArea_gte: Maybe<Scalars['Float']>;
+  ownerAddress: Maybe<Scalars['String']>;
+  ownerAddress_not: Maybe<Scalars['String']>;
+  ownerAddress_in: Maybe<Array<Scalars['String']>>;
+  ownerAddress_not_in: Maybe<Array<Scalars['String']>>;
+  ownerAddress_regexp: Maybe<Scalars['String']>;
+  ownerAddress_contains: Maybe<Scalars['String']>;
+  ownerAddress_not_contains: Maybe<Scalars['String']>;
+  ownerAddress_starts_with: Maybe<Scalars['String']>;
+  ownerAddress_not_starts_with: Maybe<Scalars['String']>;
+  ownerAddress_ends_with: Maybe<Scalars['String']>;
+  ownerAddress_not_ends_with: Maybe<Scalars['String']>;
+  ownerAddressLine1: Maybe<Scalars['String']>;
+  ownerAddressLine1_not: Maybe<Scalars['String']>;
+  ownerAddressLine1_in: Maybe<Array<Scalars['String']>>;
+  ownerAddressLine1_not_in: Maybe<Array<Scalars['String']>>;
+  ownerAddressLine1_regexp: Maybe<Scalars['String']>;
+  ownerAddressLine1_contains: Maybe<Scalars['String']>;
+  ownerAddressLine1_not_contains: Maybe<Scalars['String']>;
+  ownerAddressLine1_starts_with: Maybe<Scalars['String']>;
+  ownerAddressLine1_not_starts_with: Maybe<Scalars['String']>;
+  ownerAddressLine1_ends_with: Maybe<Scalars['String']>;
+  ownerAddressLine1_not_ends_with: Maybe<Scalars['String']>;
+  ownerAddressLine2: Maybe<Scalars['String']>;
+  ownerAddressLine2_not: Maybe<Scalars['String']>;
+  ownerAddressLine2_in: Maybe<Array<Scalars['String']>>;
+  ownerAddressLine2_not_in: Maybe<Array<Scalars['String']>>;
+  ownerAddressLine2_regexp: Maybe<Scalars['String']>;
+  ownerAddressLine2_contains: Maybe<Scalars['String']>;
+  ownerAddressLine2_not_contains: Maybe<Scalars['String']>;
+  ownerAddressLine2_starts_with: Maybe<Scalars['String']>;
+  ownerAddressLine2_not_starts_with: Maybe<Scalars['String']>;
+  ownerAddressLine2_ends_with: Maybe<Scalars['String']>;
+  ownerAddressLine2_not_ends_with: Maybe<Scalars['String']>;
+  ownerCity: Maybe<Scalars['String']>;
+  ownerCity_not: Maybe<Scalars['String']>;
+  ownerCity_in: Maybe<Array<Scalars['String']>>;
+  ownerCity_not_in: Maybe<Array<Scalars['String']>>;
+  ownerCity_regexp: Maybe<Scalars['String']>;
+  ownerCity_contains: Maybe<Scalars['String']>;
+  ownerCity_not_contains: Maybe<Scalars['String']>;
+  ownerCity_starts_with: Maybe<Scalars['String']>;
+  ownerCity_not_starts_with: Maybe<Scalars['String']>;
+  ownerCity_ends_with: Maybe<Scalars['String']>;
+  ownerCity_not_ends_with: Maybe<Scalars['String']>;
+  ownerName: Maybe<Scalars['String']>;
+  ownerName_not: Maybe<Scalars['String']>;
+  ownerName_in: Maybe<Array<Scalars['String']>>;
+  ownerName_not_in: Maybe<Array<Scalars['String']>>;
+  ownerName_regexp: Maybe<Scalars['String']>;
+  ownerName_contains: Maybe<Scalars['String']>;
+  ownerName_not_contains: Maybe<Scalars['String']>;
+  ownerName_starts_with: Maybe<Scalars['String']>;
+  ownerName_not_starts_with: Maybe<Scalars['String']>;
+  ownerName_ends_with: Maybe<Scalars['String']>;
+  ownerName_not_ends_with: Maybe<Scalars['String']>;
+  ownerState: Maybe<Scalars['String']>;
+  ownerState_not: Maybe<Scalars['String']>;
+  ownerState_in: Maybe<Array<Scalars['String']>>;
+  ownerState_not_in: Maybe<Array<Scalars['String']>>;
+  ownerState_regexp: Maybe<Scalars['String']>;
+  ownerState_contains: Maybe<Scalars['String']>;
+  ownerState_not_contains: Maybe<Scalars['String']>;
+  ownerState_starts_with: Maybe<Scalars['String']>;
+  ownerState_not_starts_with: Maybe<Scalars['String']>;
+  ownerState_ends_with: Maybe<Scalars['String']>;
+  ownerState_not_ends_with: Maybe<Scalars['String']>;
+  ownerZip: Maybe<Scalars['String']>;
+  ownerZip_not: Maybe<Scalars['String']>;
+  ownerZip_in: Maybe<Array<Scalars['String']>>;
+  ownerZip_not_in: Maybe<Array<Scalars['String']>>;
+  ownerZip_regexp: Maybe<Scalars['String']>;
+  ownerZip_contains: Maybe<Scalars['String']>;
+  ownerZip_not_contains: Maybe<Scalars['String']>;
+  ownerZip_starts_with: Maybe<Scalars['String']>;
+  ownerZip_not_starts_with: Maybe<Scalars['String']>;
+  ownerZip_ends_with: Maybe<Scalars['String']>;
+  ownerZip_not_ends_with: Maybe<Scalars['String']>;
+  propertyID: Maybe<Scalars['Int']>;
+  propertyID_not: Maybe<Scalars['Int']>;
+  propertyID_in: Maybe<Array<Scalars['Int']>>;
+  propertyID_not_in: Maybe<Array<Scalars['Int']>>;
+  propertyID_lt: Maybe<Scalars['Int']>;
+  propertyID_lte: Maybe<Scalars['Int']>;
+  propertyID_gt: Maybe<Scalars['Int']>;
+  propertyID_gte: Maybe<Scalars['Int']>;
+  range: Maybe<Scalars['String']>;
+  range_not: Maybe<Scalars['String']>;
+  range_in: Maybe<Array<Scalars['String']>>;
+  range_not_in: Maybe<Array<Scalars['String']>>;
+  range_regexp: Maybe<Scalars['String']>;
+  range_contains: Maybe<Scalars['String']>;
+  range_not_contains: Maybe<Scalars['String']>;
+  range_starts_with: Maybe<Scalars['String']>;
+  range_not_starts_with: Maybe<Scalars['String']>;
+  range_ends_with: Maybe<Scalars['String']>;
+  range_not_ends_with: Maybe<Scalars['String']>;
+  section: Maybe<Scalars['String']>;
+  section_not: Maybe<Scalars['String']>;
+  section_in: Maybe<Array<Scalars['String']>>;
+  section_not_in: Maybe<Array<Scalars['String']>>;
+  section_regexp: Maybe<Scalars['String']>;
+  section_contains: Maybe<Scalars['String']>;
+  section_not_contains: Maybe<Scalars['String']>;
+  section_starts_with: Maybe<Scalars['String']>;
+  section_not_starts_with: Maybe<Scalars['String']>;
+  section_ends_with: Maybe<Scalars['String']>;
+  section_not_ends_with: Maybe<Scalars['String']>;
+  subdivision: Maybe<Scalars['String']>;
+  subdivision_not: Maybe<Scalars['String']>;
+  subdivision_in: Maybe<Array<Scalars['String']>>;
+  subdivision_not_in: Maybe<Array<Scalars['String']>>;
+  subdivision_regexp: Maybe<Scalars['String']>;
+  subdivision_contains: Maybe<Scalars['String']>;
+  subdivision_not_contains: Maybe<Scalars['String']>;
+  subdivision_starts_with: Maybe<Scalars['String']>;
+  subdivision_not_starts_with: Maybe<Scalars['String']>;
+  subdivision_ends_with: Maybe<Scalars['String']>;
+  subdivision_not_ends_with: Maybe<Scalars['String']>;
+  taxYear: Maybe<Scalars['Int']>;
+  taxYear_not: Maybe<Scalars['Int']>;
+  taxYear_in: Maybe<Array<Scalars['Int']>>;
+  taxYear_not_in: Maybe<Array<Scalars['Int']>>;
+  taxYear_lt: Maybe<Scalars['Int']>;
+  taxYear_lte: Maybe<Scalars['Int']>;
+  taxYear_gt: Maybe<Scalars['Int']>;
+  taxYear_gte: Maybe<Scalars['Int']>;
+  totalArea: Maybe<Scalars['Float']>;
+  totalArea_not: Maybe<Scalars['Float']>;
+  totalArea_in: Maybe<Array<Scalars['Float']>>;
+  totalArea_not_in: Maybe<Array<Scalars['Float']>>;
+  totalArea_lt: Maybe<Scalars['Float']>;
+  totalArea_lte: Maybe<Scalars['Float']>;
+  totalArea_gt: Maybe<Scalars['Float']>;
+  totalArea_gte: Maybe<Scalars['Float']>;
+  totalValue: Maybe<Scalars['Int']>;
+  totalValue_not: Maybe<Scalars['Int']>;
+  totalValue_in: Maybe<Array<Scalars['Int']>>;
+  totalValue_not_in: Maybe<Array<Scalars['Int']>>;
+  totalValue_lt: Maybe<Scalars['Int']>;
+  totalValue_lte: Maybe<Scalars['Int']>;
+  totalValue_gt: Maybe<Scalars['Int']>;
+  totalValue_gte: Maybe<Scalars['Int']>;
+  township: Maybe<Scalars['String']>;
+  township_not: Maybe<Scalars['String']>;
+  township_in: Maybe<Array<Scalars['String']>>;
+  township_not_in: Maybe<Array<Scalars['String']>>;
+  township_regexp: Maybe<Scalars['String']>;
+  township_contains: Maybe<Scalars['String']>;
+  township_not_contains: Maybe<Scalars['String']>;
+  township_starts_with: Maybe<Scalars['String']>;
+  township_not_starts_with: Maybe<Scalars['String']>;
+  township_ends_with: Maybe<Scalars['String']>;
+  township_not_ends_with: Maybe<Scalars['String']>;
+  type: Maybe<Scalars['String']>;
+  type_not: Maybe<Scalars['String']>;
+  type_in: Maybe<Array<Scalars['String']>>;
+  type_not_in: Maybe<Array<Scalars['String']>>;
+  type_regexp: Maybe<Scalars['String']>;
+  type_contains: Maybe<Scalars['String']>;
+  type_not_contains: Maybe<Scalars['String']>;
+  type_starts_with: Maybe<Scalars['String']>;
+  type_not_starts_with: Maybe<Scalars['String']>;
+  type_ends_with: Maybe<Scalars['String']>;
+  type_not_ends_with: Maybe<Scalars['String']>;
+  wildHayArea: Maybe<Scalars['Float']>;
+  wildHayArea_not: Maybe<Scalars['Float']>;
+  wildHayArea_in: Maybe<Array<Scalars['Float']>>;
+  wildHayArea_not_in: Maybe<Array<Scalars['Float']>>;
+  wildHayArea_lt: Maybe<Scalars['Float']>;
+  wildHayArea_lte: Maybe<Scalars['Float']>;
+  wildHayArea_gt: Maybe<Scalars['Float']>;
+  wildHayArea_gte: Maybe<Scalars['Float']>;
 };
 
-export type User = {
-  __typename?: 'User';
-  userId: Scalars['ID'];
-  name: Maybe<Scalars['String']>;
-  reviews: Maybe<Array<Maybe<Review>>>;
-  avgStars: Maybe<Scalars['Float']>;
-  numReviews: Maybe<Scalars['Int']>;
-  recommendations: Maybe<Array<Maybe<Business>>>;
+export type Property = {
+  __typename?: 'Property';
   /** Generated field for querying the Neo4j [system id](https://neo4j.com/docs/cypher-manual/current/functions/scalar/#functions-id) of this node. */
   _id: Maybe<Scalars['String']>;
-};
-
-
-export type UserReviewsArgs = {
-  first: Maybe<Scalars['Int']>;
-  offset: Maybe<Scalars['Int']>;
-  orderBy: Maybe<Array<Maybe<_ReviewOrdering>>>;
-  filter: Maybe<_ReviewFilter>;
-};
-
-
-export type UserRecommendationsArgs = {
-  first?: Maybe<Scalars['Int']>;
-  offset: Maybe<Scalars['Int']>;
-  orderBy: Maybe<Array<Maybe<_BusinessOrdering>>>;
-};
-
-export type _AddBusinessReviewsPayload = {
-  __typename?: '_AddBusinessReviewsPayload';
-  /** Field for the Review node this REVIEWS [relationship](https://grandstack.io/docs/graphql-relationship-types) is coming from. */
-  from: Maybe<Review>;
-  /** Field for the Business node this REVIEWS [relationship](https://grandstack.io/docs/graphql-relationship-types) is going to. */
-  to: Maybe<Business>;
-};
-
-export type _RemoveBusinessReviewsPayload = {
-  __typename?: '_RemoveBusinessReviewsPayload';
-  /** Field for the Review node this REVIEWS [relationship](https://grandstack.io/docs/graphql-relationship-types) is coming from. */
-  from: Maybe<Review>;
-  /** Field for the Business node this REVIEWS [relationship](https://grandstack.io/docs/graphql-relationship-types) is going to. */
-  to: Maybe<Business>;
-};
-
-export type _MergeBusinessReviewsPayload = {
-  __typename?: '_MergeBusinessReviewsPayload';
-  /** Field for the Review node this REVIEWS [relationship](https://grandstack.io/docs/graphql-relationship-types) is coming from. */
-  from: Maybe<Review>;
-  /** Field for the Business node this REVIEWS [relationship](https://grandstack.io/docs/graphql-relationship-types) is going to. */
-  to: Maybe<Business>;
-};
-
-export type _AddBusinessCategoriesPayload = {
-  __typename?: '_AddBusinessCategoriesPayload';
-  /** Field for the Business node this IN_CATEGORY [relationship](https://grandstack.io/docs/graphql-relationship-types) is coming from. */
-  from: Maybe<Business>;
-  /** Field for the Category node this IN_CATEGORY [relationship](https://grandstack.io/docs/graphql-relationship-types) is going to. */
-  to: Maybe<Category>;
-};
-
-export type _RemoveBusinessCategoriesPayload = {
-  __typename?: '_RemoveBusinessCategoriesPayload';
-  /** Field for the Business node this IN_CATEGORY [relationship](https://grandstack.io/docs/graphql-relationship-types) is coming from. */
-  from: Maybe<Business>;
-  /** Field for the Category node this IN_CATEGORY [relationship](https://grandstack.io/docs/graphql-relationship-types) is going to. */
-  to: Maybe<Category>;
-};
-
-export type _MergeBusinessCategoriesPayload = {
-  __typename?: '_MergeBusinessCategoriesPayload';
-  /** Field for the Business node this IN_CATEGORY [relationship](https://grandstack.io/docs/graphql-relationship-types) is coming from. */
-  from: Maybe<Business>;
-  /** Field for the Category node this IN_CATEGORY [relationship](https://grandstack.io/docs/graphql-relationship-types) is going to. */
-  to: Maybe<Category>;
-};
-
-export type _BusinessInput = {
-  businessId: Scalars['ID'];
-};
-
-export enum _BusinessOrdering {
-  BusinessIdAsc = 'businessId_asc',
-  BusinessIdDesc = 'businessId_desc',
-  NameAsc = 'name_asc',
-  NameDesc = 'name_desc',
-  AddressAsc = 'address_asc',
-  AddressDesc = 'address_desc',
-  CityAsc = 'city_asc',
-  CityDesc = 'city_desc',
-  StateAsc = 'state_asc',
-  StateDesc = 'state_desc',
-  AvgStarsAsc = 'avgStars_asc',
-  AvgStarsDesc = 'avgStars_desc',
-  IdAsc = '_id_asc',
-  IdDesc = '_id_desc'
-}
-
-export type _BusinessFilter = {
-  AND: Maybe<Array<_BusinessFilter>>;
-  OR: Maybe<Array<_BusinessFilter>>;
-  businessId: Maybe<Scalars['ID']>;
-  businessId_not: Maybe<Scalars['ID']>;
-  businessId_in: Maybe<Array<Scalars['ID']>>;
-  businessId_not_in: Maybe<Array<Scalars['ID']>>;
-  businessId_regexp: Maybe<Scalars['ID']>;
-  businessId_contains: Maybe<Scalars['ID']>;
-  businessId_not_contains: Maybe<Scalars['ID']>;
-  businessId_starts_with: Maybe<Scalars['ID']>;
-  businessId_not_starts_with: Maybe<Scalars['ID']>;
-  businessId_ends_with: Maybe<Scalars['ID']>;
-  businessId_not_ends_with: Maybe<Scalars['ID']>;
-  name: Maybe<Scalars['String']>;
-  name_not: Maybe<Scalars['String']>;
-  name_in: Maybe<Array<Scalars['String']>>;
-  name_not_in: Maybe<Array<Scalars['String']>>;
-  name_regexp: Maybe<Scalars['String']>;
-  name_contains: Maybe<Scalars['String']>;
-  name_not_contains: Maybe<Scalars['String']>;
-  name_starts_with: Maybe<Scalars['String']>;
-  name_not_starts_with: Maybe<Scalars['String']>;
-  name_ends_with: Maybe<Scalars['String']>;
-  name_not_ends_with: Maybe<Scalars['String']>;
-  address: Maybe<Scalars['String']>;
-  address_not: Maybe<Scalars['String']>;
-  address_in: Maybe<Array<Scalars['String']>>;
-  address_not_in: Maybe<Array<Scalars['String']>>;
-  address_regexp: Maybe<Scalars['String']>;
-  address_contains: Maybe<Scalars['String']>;
-  address_not_contains: Maybe<Scalars['String']>;
-  address_starts_with: Maybe<Scalars['String']>;
-  address_not_starts_with: Maybe<Scalars['String']>;
-  address_ends_with: Maybe<Scalars['String']>;
-  address_not_ends_with: Maybe<Scalars['String']>;
-  city: Maybe<Scalars['String']>;
-  city_not: Maybe<Scalars['String']>;
-  city_in: Maybe<Array<Scalars['String']>>;
-  city_not_in: Maybe<Array<Scalars['String']>>;
-  city_regexp: Maybe<Scalars['String']>;
-  city_contains: Maybe<Scalars['String']>;
-  city_not_contains: Maybe<Scalars['String']>;
-  city_starts_with: Maybe<Scalars['String']>;
-  city_not_starts_with: Maybe<Scalars['String']>;
-  city_ends_with: Maybe<Scalars['String']>;
-  city_not_ends_with: Maybe<Scalars['String']>;
-  state: Maybe<Scalars['String']>;
-  state_not: Maybe<Scalars['String']>;
-  state_in: Maybe<Array<Scalars['String']>>;
-  state_not_in: Maybe<Array<Scalars['String']>>;
-  state_regexp: Maybe<Scalars['String']>;
-  state_contains: Maybe<Scalars['String']>;
-  state_not_contains: Maybe<Scalars['String']>;
-  state_starts_with: Maybe<Scalars['String']>;
-  state_not_starts_with: Maybe<Scalars['String']>;
-  state_ends_with: Maybe<Scalars['String']>;
-  state_not_ends_with: Maybe<Scalars['String']>;
-  location: Maybe<_Neo4jPointInput>;
-  location_not: Maybe<_Neo4jPointInput>;
-  location_distance: Maybe<_Neo4jPointDistanceFilter>;
-  location_distance_lt: Maybe<_Neo4jPointDistanceFilter>;
-  location_distance_lte: Maybe<_Neo4jPointDistanceFilter>;
-  location_distance_gt: Maybe<_Neo4jPointDistanceFilter>;
-  location_distance_gte: Maybe<_Neo4jPointDistanceFilter>;
-  reviews: Maybe<_ReviewFilter>;
-  reviews_not: Maybe<_ReviewFilter>;
-  reviews_in: Maybe<Array<_ReviewFilter>>;
-  reviews_not_in: Maybe<Array<_ReviewFilter>>;
-  reviews_some: Maybe<_ReviewFilter>;
-  reviews_none: Maybe<_ReviewFilter>;
-  reviews_single: Maybe<_ReviewFilter>;
-  reviews_every: Maybe<_ReviewFilter>;
-  categories: Maybe<_CategoryFilter>;
-  categories_not: Maybe<_CategoryFilter>;
-  categories_in: Maybe<Array<_CategoryFilter>>;
-  categories_not_in: Maybe<Array<_CategoryFilter>>;
-  categories_some: Maybe<_CategoryFilter>;
-  categories_none: Maybe<_CategoryFilter>;
-  categories_single: Maybe<_CategoryFilter>;
-  categories_every: Maybe<_CategoryFilter>;
-};
-
-export type Business = {
-  __typename?: 'Business';
-  businessId: Scalars['ID'];
-  name: Scalars['String'];
-  address: Maybe<Scalars['String']>;
-  city: Maybe<Scalars['String']>;
-  state: Maybe<Scalars['String']>;
-  location: Maybe<_Neo4jPoint>;
-  avgStars: Maybe<Scalars['Float']>;
-  reviews: Maybe<Array<Maybe<Review>>>;
-  categories: Maybe<Array<Maybe<Category>>>;
-  /** Generated field for querying the Neo4j [system id](https://neo4j.com/docs/cypher-manual/current/functions/scalar/#functions-id) of this node. */
-  _id: Maybe<Scalars['String']>;
-};
-
-
-export type BusinessReviewsArgs = {
-  first: Maybe<Scalars['Int']>;
-  offset: Maybe<Scalars['Int']>;
-  orderBy: Maybe<Array<Maybe<_ReviewOrdering>>>;
-  filter: Maybe<_ReviewFilter>;
-};
-
-
-export type BusinessCategoriesArgs = {
-  first: Maybe<Scalars['Int']>;
-  offset: Maybe<Scalars['Int']>;
-  orderBy: Maybe<Array<Maybe<_CategoryOrdering>>>;
-  filter: Maybe<_CategoryFilter>;
-};
-
-export type _AddReviewBusinessPayload = {
-  __typename?: '_AddReviewBusinessPayload';
-  /** Field for the Review node this REVIEWS [relationship](https://grandstack.io/docs/graphql-relationship-types) is coming from. */
-  from: Maybe<Review>;
-  /** Field for the Business node this REVIEWS [relationship](https://grandstack.io/docs/graphql-relationship-types) is going to. */
-  to: Maybe<Business>;
-};
-
-export type _RemoveReviewBusinessPayload = {
-  __typename?: '_RemoveReviewBusinessPayload';
-  /** Field for the Review node this REVIEWS [relationship](https://grandstack.io/docs/graphql-relationship-types) is coming from. */
-  from: Maybe<Review>;
-  /** Field for the Business node this REVIEWS [relationship](https://grandstack.io/docs/graphql-relationship-types) is going to. */
-  to: Maybe<Business>;
-};
-
-export type _MergeReviewBusinessPayload = {
-  __typename?: '_MergeReviewBusinessPayload';
-  /** Field for the Review node this REVIEWS [relationship](https://grandstack.io/docs/graphql-relationship-types) is coming from. */
-  from: Maybe<Review>;
-  /** Field for the Business node this REVIEWS [relationship](https://grandstack.io/docs/graphql-relationship-types) is going to. */
-  to: Maybe<Business>;
-};
-
-export type _AddReviewUserPayload = {
-  __typename?: '_AddReviewUserPayload';
-  /** Field for the User node this WROTE [relationship](https://grandstack.io/docs/graphql-relationship-types) is coming from. */
-  from: Maybe<User>;
-  /** Field for the Review node this WROTE [relationship](https://grandstack.io/docs/graphql-relationship-types) is going to. */
-  to: Maybe<Review>;
-};
-
-export type _RemoveReviewUserPayload = {
-  __typename?: '_RemoveReviewUserPayload';
-  /** Field for the User node this WROTE [relationship](https://grandstack.io/docs/graphql-relationship-types) is coming from. */
-  from: Maybe<User>;
-  /** Field for the Review node this WROTE [relationship](https://grandstack.io/docs/graphql-relationship-types) is going to. */
-  to: Maybe<Review>;
-};
-
-export type _MergeReviewUserPayload = {
-  __typename?: '_MergeReviewUserPayload';
-  /** Field for the User node this WROTE [relationship](https://grandstack.io/docs/graphql-relationship-types) is coming from. */
-  from: Maybe<User>;
-  /** Field for the Review node this WROTE [relationship](https://grandstack.io/docs/graphql-relationship-types) is going to. */
-  to: Maybe<Review>;
-};
-
-export type _ReviewInput = {
-  reviewId: Scalars['ID'];
-};
-
-export enum _ReviewOrdering {
-  ReviewIdAsc = 'reviewId_asc',
-  ReviewIdDesc = 'reviewId_desc',
-  StarsAsc = 'stars_asc',
-  StarsDesc = 'stars_desc',
-  TextAsc = 'text_asc',
-  TextDesc = 'text_desc',
-  DateAsc = 'date_asc',
-  DateDesc = 'date_desc',
-  IdAsc = '_id_asc',
-  IdDesc = '_id_desc'
-}
-
-export type _ReviewFilter = {
-  AND: Maybe<Array<_ReviewFilter>>;
-  OR: Maybe<Array<_ReviewFilter>>;
-  reviewId: Maybe<Scalars['ID']>;
-  reviewId_not: Maybe<Scalars['ID']>;
-  reviewId_in: Maybe<Array<Scalars['ID']>>;
-  reviewId_not_in: Maybe<Array<Scalars['ID']>>;
-  reviewId_regexp: Maybe<Scalars['ID']>;
-  reviewId_contains: Maybe<Scalars['ID']>;
-  reviewId_not_contains: Maybe<Scalars['ID']>;
-  reviewId_starts_with: Maybe<Scalars['ID']>;
-  reviewId_not_starts_with: Maybe<Scalars['ID']>;
-  reviewId_ends_with: Maybe<Scalars['ID']>;
-  reviewId_not_ends_with: Maybe<Scalars['ID']>;
-  stars: Maybe<Scalars['Float']>;
-  stars_not: Maybe<Scalars['Float']>;
-  stars_in: Maybe<Array<Scalars['Float']>>;
-  stars_not_in: Maybe<Array<Scalars['Float']>>;
-  stars_lt: Maybe<Scalars['Float']>;
-  stars_lte: Maybe<Scalars['Float']>;
-  stars_gt: Maybe<Scalars['Float']>;
-  stars_gte: Maybe<Scalars['Float']>;
-  text: Maybe<Scalars['String']>;
-  text_not: Maybe<Scalars['String']>;
-  text_in: Maybe<Array<Scalars['String']>>;
-  text_not_in: Maybe<Array<Scalars['String']>>;
-  text_regexp: Maybe<Scalars['String']>;
-  text_contains: Maybe<Scalars['String']>;
-  text_not_contains: Maybe<Scalars['String']>;
-  text_starts_with: Maybe<Scalars['String']>;
-  text_not_starts_with: Maybe<Scalars['String']>;
-  text_ends_with: Maybe<Scalars['String']>;
-  text_not_ends_with: Maybe<Scalars['String']>;
-  date: Maybe<_Neo4jDateInput>;
-  date_not: Maybe<_Neo4jDateInput>;
-  date_in: Maybe<Array<_Neo4jDateInput>>;
-  date_not_in: Maybe<Array<_Neo4jDateInput>>;
-  date_lt: Maybe<_Neo4jDateInput>;
-  date_lte: Maybe<_Neo4jDateInput>;
-  date_gt: Maybe<_Neo4jDateInput>;
-  date_gte: Maybe<_Neo4jDateInput>;
-  business: Maybe<_BusinessFilter>;
-  business_not: Maybe<_BusinessFilter>;
-  business_in: Maybe<Array<_BusinessFilter>>;
-  business_not_in: Maybe<Array<_BusinessFilter>>;
-  user: Maybe<_UserFilter>;
-  user_not: Maybe<_UserFilter>;
-  user_in: Maybe<Array<_UserFilter>>;
-  user_not_in: Maybe<Array<_UserFilter>>;
-};
-
-export type Review = {
-  __typename?: 'Review';
-  reviewId: Scalars['ID'];
-  stars: Maybe<Scalars['Float']>;
-  text: Maybe<Scalars['String']>;
-  date: Maybe<_Neo4jDate>;
-  business: Maybe<Business>;
-  user: Maybe<User>;
-  /** Generated field for querying the Neo4j [system id](https://neo4j.com/docs/cypher-manual/current/functions/scalar/#functions-id) of this node. */
-  _id: Maybe<Scalars['String']>;
-};
-
-
-export type ReviewBusinessArgs = {
-  filter: Maybe<_BusinessFilter>;
-};
-
-
-export type ReviewUserArgs = {
-  filter: Maybe<_UserFilter>;
-};
-
-export type _AddCategoryBusinessesPayload = {
-  __typename?: '_AddCategoryBusinessesPayload';
-  /** Field for the Business node this IN_CATEGORY [relationship](https://grandstack.io/docs/graphql-relationship-types) is coming from. */
-  from: Maybe<Business>;
-  /** Field for the Category node this IN_CATEGORY [relationship](https://grandstack.io/docs/graphql-relationship-types) is going to. */
-  to: Maybe<Category>;
-};
-
-export type _RemoveCategoryBusinessesPayload = {
-  __typename?: '_RemoveCategoryBusinessesPayload';
-  /** Field for the Business node this IN_CATEGORY [relationship](https://grandstack.io/docs/graphql-relationship-types) is coming from. */
-  from: Maybe<Business>;
-  /** Field for the Category node this IN_CATEGORY [relationship](https://grandstack.io/docs/graphql-relationship-types) is going to. */
-  to: Maybe<Category>;
-};
-
-export type _MergeCategoryBusinessesPayload = {
-  __typename?: '_MergeCategoryBusinessesPayload';
-  /** Field for the Business node this IN_CATEGORY [relationship](https://grandstack.io/docs/graphql-relationship-types) is coming from. */
-  from: Maybe<Business>;
-  /** Field for the Category node this IN_CATEGORY [relationship](https://grandstack.io/docs/graphql-relationship-types) is going to. */
-  to: Maybe<Category>;
-};
-
-export type _CategoryInput = {
-  name: Scalars['ID'];
-};
-
-export enum _CategoryOrdering {
-  NameAsc = 'name_asc',
-  NameDesc = 'name_desc',
-  IdAsc = '_id_asc',
-  IdDesc = '_id_desc'
-}
-
-export type _CategoryFilter = {
-  AND: Maybe<Array<_CategoryFilter>>;
-  OR: Maybe<Array<_CategoryFilter>>;
-  name: Maybe<Scalars['ID']>;
-  name_not: Maybe<Scalars['ID']>;
-  name_in: Maybe<Array<Scalars['ID']>>;
-  name_not_in: Maybe<Array<Scalars['ID']>>;
-  name_regexp: Maybe<Scalars['ID']>;
-  name_contains: Maybe<Scalars['ID']>;
-  name_not_contains: Maybe<Scalars['ID']>;
-  name_starts_with: Maybe<Scalars['ID']>;
-  name_not_starts_with: Maybe<Scalars['ID']>;
-  name_ends_with: Maybe<Scalars['ID']>;
-  name_not_ends_with: Maybe<Scalars['ID']>;
-  businesses: Maybe<_BusinessFilter>;
-  businesses_not: Maybe<_BusinessFilter>;
-  businesses_in: Maybe<Array<_BusinessFilter>>;
-  businesses_not_in: Maybe<Array<_BusinessFilter>>;
-  businesses_some: Maybe<_BusinessFilter>;
-  businesses_none: Maybe<_BusinessFilter>;
-  businesses_single: Maybe<_BusinessFilter>;
-  businesses_every: Maybe<_BusinessFilter>;
-};
-
-export type Category = {
-  __typename?: 'Category';
-  name: Scalars['ID'];
-  businesses: Maybe<Array<Maybe<Business>>>;
-  /** Generated field for querying the Neo4j [system id](https://neo4j.com/docs/cypher-manual/current/functions/scalar/#functions-id) of this node. */
-  _id: Maybe<Scalars['String']>;
-};
-
-
-export type CategoryBusinessesArgs = {
-  first: Maybe<Scalars['Int']>;
-  offset: Maybe<Scalars['Int']>;
-  orderBy: Maybe<Array<Maybe<_BusinessOrdering>>>;
-  filter: Maybe<_BusinessFilter>;
-};
-
-export type RatingCount = {
-  __typename?: 'RatingCount';
-  stars: Scalars['Float'];
-  count: Scalars['Int'];
+  addressLine: Maybe<Scalars['String']>;
+  addressLine1: Maybe<Scalars['String']>;
+  assessment: Maybe<Scalars['String']>;
+  buildingValue: Scalars['Int'];
+  certificate: Maybe<Scalars['String']>;
+  cityState: Maybe<Scalars['String']>;
+  continuous: Scalars['Float'];
+  countyAbbreviation: Scalars['String'];
+  countyName: Scalars['String'];
+  farmsiteArea: Scalars['Float'];
+  forestArea: Scalars['Float'];
+  geometryArea: Scalars['Float'];
+  geometryLength: Scalars['Float'];
+  geometryType: Scalars['String'];
+  grazingArea: Scalars['Float'];
+  irrigatedArea: Scalars['Float'];
+  landValue: Scalars['Int'];
+  legalDescription: Maybe<Scalars['String']>;
+  levyDistrict: Maybe<Scalars['String']>;
+  nonQualityArea: Scalars['Float'];
+  ownerAddress: Maybe<Scalars['String']>;
+  ownerAddressLine1: Maybe<Scalars['String']>;
+  ownerAddressLine2: Maybe<Scalars['String']>;
+  ownerCity: Maybe<Scalars['String']>;
+  ownerName: Maybe<Scalars['String']>;
+  ownerState: Maybe<Scalars['String']>;
+  ownerZip: Maybe<Scalars['String']>;
+  propertyID: Scalars['Int'];
+  range: Maybe<Scalars['String']>;
+  section: Maybe<Scalars['String']>;
+  subdivision: Maybe<Scalars['String']>;
+  taxYear: Scalars['Int'];
+  totalArea: Scalars['Float'];
+  totalValue: Scalars['Int'];
+  township: Maybe<Scalars['String']>;
+  type: Maybe<Scalars['String']>;
+  wildHayArea: Scalars['Float'];
 };
 
 /** Generated Time input object for Neo4j [Temporal field arguments](https://grandstack.io/docs/graphql-temporal-types-datetime/#temporal-query-arguments). */
@@ -698,459 +686,244 @@ export enum _RelationDirections {
   Out = 'OUT'
 }
 
-export type Mutation = {
-  __typename?: 'Mutation';
-  mergeBusinessCategory: Maybe<Business>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/##add--remove-relationship) for [creating](https://neo4j.com/docs/cypher-manual/4.1/clauses/create/#create-relationships) the WROTE relationship. */
-  AddUserReviews: Maybe<_AddUserReviewsPayload>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/##add--remove-relationship) for [deleting](https://neo4j.com/docs/cypher-manual/4.1/clauses/delete/#delete-delete-relationships-only) the WROTE relationship. */
-  RemoveUserReviews: Maybe<_RemoveUserReviewsPayload>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/##merge-relationship) for [merging](https://neo4j.com/docs/cypher-manual/4.1/clauses/merge/#query-merge-relationships) the WROTE relationship. */
-  MergeUserReviews: Maybe<_MergeUserReviewsPayload>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#create) for [creating](https://neo4j.com/docs/cypher-manual/4.1/clauses/create/#create-nodes) a User node. */
-  CreateUser: Maybe<User>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#update) for [updating](https://neo4j.com/docs/cypher-manual/4.1/clauses/set/#set-update-a-property) a User node. */
-  UpdateUser: Maybe<User>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#delete) for [deleting](https://neo4j.com/docs/cypher-manual/4.1/clauses/delete/#delete-delete-single-node) a User node. */
-  DeleteUser: Maybe<User>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#merge) for [merging](https://neo4j.com/docs/cypher-manual/4.1/clauses/merge/#query-merge-node-derived) a User node. */
-  MergeUser: Maybe<User>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/##add--remove-relationship) for [creating](https://neo4j.com/docs/cypher-manual/4.1/clauses/create/#create-relationships) the REVIEWS relationship. */
-  AddBusinessReviews: Maybe<_AddBusinessReviewsPayload>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/##add--remove-relationship) for [deleting](https://neo4j.com/docs/cypher-manual/4.1/clauses/delete/#delete-delete-relationships-only) the REVIEWS relationship. */
-  RemoveBusinessReviews: Maybe<_RemoveBusinessReviewsPayload>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/##merge-relationship) for [merging](https://neo4j.com/docs/cypher-manual/4.1/clauses/merge/#query-merge-relationships) the REVIEWS relationship. */
-  MergeBusinessReviews: Maybe<_MergeBusinessReviewsPayload>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/##add--remove-relationship) for [creating](https://neo4j.com/docs/cypher-manual/4.1/clauses/create/#create-relationships) the IN_CATEGORY relationship. */
-  AddBusinessCategories: Maybe<_AddBusinessCategoriesPayload>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/##add--remove-relationship) for [deleting](https://neo4j.com/docs/cypher-manual/4.1/clauses/delete/#delete-delete-relationships-only) the IN_CATEGORY relationship. */
-  RemoveBusinessCategories: Maybe<_RemoveBusinessCategoriesPayload>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/##merge-relationship) for [merging](https://neo4j.com/docs/cypher-manual/4.1/clauses/merge/#query-merge-relationships) the IN_CATEGORY relationship. */
-  MergeBusinessCategories: Maybe<_MergeBusinessCategoriesPayload>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#create) for [creating](https://neo4j.com/docs/cypher-manual/4.1/clauses/create/#create-nodes) a Business node. */
-  CreateBusiness: Maybe<Business>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#update) for [updating](https://neo4j.com/docs/cypher-manual/4.1/clauses/set/#set-update-a-property) a Business node. */
-  UpdateBusiness: Maybe<Business>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#delete) for [deleting](https://neo4j.com/docs/cypher-manual/4.1/clauses/delete/#delete-delete-single-node) a Business node. */
-  DeleteBusiness: Maybe<Business>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#merge) for [merging](https://neo4j.com/docs/cypher-manual/4.1/clauses/merge/#query-merge-node-derived) a Business node. */
-  MergeBusiness: Maybe<Business>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/##add--remove-relationship) for [creating](https://neo4j.com/docs/cypher-manual/4.1/clauses/create/#create-relationships) the REVIEWS relationship. */
-  AddReviewBusiness: Maybe<_AddReviewBusinessPayload>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/##add--remove-relationship) for [deleting](https://neo4j.com/docs/cypher-manual/4.1/clauses/delete/#delete-delete-relationships-only) the REVIEWS relationship. */
-  RemoveReviewBusiness: Maybe<_RemoveReviewBusinessPayload>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/##merge-relationship) for [merging](https://neo4j.com/docs/cypher-manual/4.1/clauses/merge/#query-merge-relationships) the REVIEWS relationship. */
-  MergeReviewBusiness: Maybe<_MergeReviewBusinessPayload>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/##add--remove-relationship) for [creating](https://neo4j.com/docs/cypher-manual/4.1/clauses/create/#create-relationships) the WROTE relationship. */
-  AddReviewUser: Maybe<_AddReviewUserPayload>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/##add--remove-relationship) for [deleting](https://neo4j.com/docs/cypher-manual/4.1/clauses/delete/#delete-delete-relationships-only) the WROTE relationship. */
-  RemoveReviewUser: Maybe<_RemoveReviewUserPayload>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/##merge-relationship) for [merging](https://neo4j.com/docs/cypher-manual/4.1/clauses/merge/#query-merge-relationships) the WROTE relationship. */
-  MergeReviewUser: Maybe<_MergeReviewUserPayload>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#create) for [creating](https://neo4j.com/docs/cypher-manual/4.1/clauses/create/#create-nodes) a Review node. */
-  CreateReview: Maybe<Review>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#update) for [updating](https://neo4j.com/docs/cypher-manual/4.1/clauses/set/#set-update-a-property) a Review node. */
-  UpdateReview: Maybe<Review>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#delete) for [deleting](https://neo4j.com/docs/cypher-manual/4.1/clauses/delete/#delete-delete-single-node) a Review node. */
-  DeleteReview: Maybe<Review>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#merge) for [merging](https://neo4j.com/docs/cypher-manual/4.1/clauses/merge/#query-merge-node-derived) a Review node. */
-  MergeReview: Maybe<Review>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/##add--remove-relationship) for [creating](https://neo4j.com/docs/cypher-manual/4.1/clauses/create/#create-relationships) the IN_CATEGORY relationship. */
-  AddCategoryBusinesses: Maybe<_AddCategoryBusinessesPayload>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/##add--remove-relationship) for [deleting](https://neo4j.com/docs/cypher-manual/4.1/clauses/delete/#delete-delete-relationships-only) the IN_CATEGORY relationship. */
-  RemoveCategoryBusinesses: Maybe<_RemoveCategoryBusinessesPayload>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/##merge-relationship) for [merging](https://neo4j.com/docs/cypher-manual/4.1/clauses/merge/#query-merge-relationships) the IN_CATEGORY relationship. */
-  MergeCategoryBusinesses: Maybe<_MergeCategoryBusinessesPayload>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#create) for [creating](https://neo4j.com/docs/cypher-manual/4.1/clauses/create/#create-nodes) a Category node. */
-  CreateCategory: Maybe<Category>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#delete) for [deleting](https://neo4j.com/docs/cypher-manual/4.1/clauses/delete/#delete-delete-single-node) a Category node. */
-  DeleteCategory: Maybe<Category>;
-  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#merge) for [merging](https://neo4j.com/docs/cypher-manual/4.1/clauses/merge/#query-merge-node-derived) a Category node. */
-  MergeCategory: Maybe<Category>;
-};
-
-
-export type MutationMergeBusinessCategoryArgs = {
-  categories: Array<Scalars['String']>;
-  businessId: Scalars['ID'];
-};
-
-
-export type MutationAddUserReviewsArgs = {
-  from: _UserInput;
-  to: _ReviewInput;
-};
-
-
-export type MutationRemoveUserReviewsArgs = {
-  from: _UserInput;
-  to: _ReviewInput;
-};
-
-
-export type MutationMergeUserReviewsArgs = {
-  from: _UserInput;
-  to: _ReviewInput;
-};
-
-
-export type MutationCreateUserArgs = {
-  userId: Maybe<Scalars['ID']>;
-  name: Maybe<Scalars['String']>;
-};
-
-
-export type MutationUpdateUserArgs = {
-  userId: Scalars['ID'];
-  name: Maybe<Scalars['String']>;
-};
-
-
-export type MutationDeleteUserArgs = {
-  userId: Scalars['ID'];
-};
-
-
-export type MutationMergeUserArgs = {
-  userId: Scalars['ID'];
-  name: Maybe<Scalars['String']>;
-};
-
-
-export type MutationAddBusinessReviewsArgs = {
-  from: _ReviewInput;
-  to: _BusinessInput;
-};
-
-
-export type MutationRemoveBusinessReviewsArgs = {
-  from: _ReviewInput;
-  to: _BusinessInput;
-};
-
-
-export type MutationMergeBusinessReviewsArgs = {
-  from: _ReviewInput;
-  to: _BusinessInput;
-};
-
-
-export type MutationAddBusinessCategoriesArgs = {
-  from: _BusinessInput;
-  to: _CategoryInput;
-};
-
-
-export type MutationRemoveBusinessCategoriesArgs = {
-  from: _BusinessInput;
-  to: _CategoryInput;
-};
-
-
-export type MutationMergeBusinessCategoriesArgs = {
-  from: _BusinessInput;
-  to: _CategoryInput;
-};
-
-
-export type MutationCreateBusinessArgs = {
-  businessId: Maybe<Scalars['ID']>;
-  name: Scalars['String'];
-  address: Maybe<Scalars['String']>;
-  city: Maybe<Scalars['String']>;
-  state: Maybe<Scalars['String']>;
-  location: Maybe<_Neo4jPointInput>;
-};
-
-
-export type MutationUpdateBusinessArgs = {
-  businessId: Scalars['ID'];
-  name: Maybe<Scalars['String']>;
-  address: Maybe<Scalars['String']>;
-  city: Maybe<Scalars['String']>;
-  state: Maybe<Scalars['String']>;
-  location: Maybe<_Neo4jPointInput>;
-};
-
-
-export type MutationDeleteBusinessArgs = {
-  businessId: Scalars['ID'];
-};
-
-
-export type MutationMergeBusinessArgs = {
-  businessId: Scalars['ID'];
-  name: Maybe<Scalars['String']>;
-  address: Maybe<Scalars['String']>;
-  city: Maybe<Scalars['String']>;
-  state: Maybe<Scalars['String']>;
-  location: Maybe<_Neo4jPointInput>;
-};
-
-
-export type MutationAddReviewBusinessArgs = {
-  from: _ReviewInput;
-  to: _BusinessInput;
-};
-
-
-export type MutationRemoveReviewBusinessArgs = {
-  from: _ReviewInput;
-  to: _BusinessInput;
-};
-
-
-export type MutationMergeReviewBusinessArgs = {
-  from: _ReviewInput;
-  to: _BusinessInput;
-};
-
-
-export type MutationAddReviewUserArgs = {
-  from: _UserInput;
-  to: _ReviewInput;
-};
-
-
-export type MutationRemoveReviewUserArgs = {
-  from: _UserInput;
-  to: _ReviewInput;
-};
-
-
-export type MutationMergeReviewUserArgs = {
-  from: _UserInput;
-  to: _ReviewInput;
-};
-
-
-export type MutationCreateReviewArgs = {
-  reviewId: Maybe<Scalars['ID']>;
-  stars: Maybe<Scalars['Float']>;
-  text: Maybe<Scalars['String']>;
-  date: Maybe<_Neo4jDateInput>;
-};
-
-
-export type MutationUpdateReviewArgs = {
-  reviewId: Scalars['ID'];
-  stars: Maybe<Scalars['Float']>;
-  text: Maybe<Scalars['String']>;
-  date: Maybe<_Neo4jDateInput>;
-};
-
-
-export type MutationDeleteReviewArgs = {
-  reviewId: Scalars['ID'];
-};
-
-
-export type MutationMergeReviewArgs = {
-  reviewId: Scalars['ID'];
-  stars: Maybe<Scalars['Float']>;
-  text: Maybe<Scalars['String']>;
-  date: Maybe<_Neo4jDateInput>;
-};
-
-
-export type MutationAddCategoryBusinessesArgs = {
-  from: _BusinessInput;
-  to: _CategoryInput;
-};
-
-
-export type MutationRemoveCategoryBusinessesArgs = {
-  from: _BusinessInput;
-  to: _CategoryInput;
-};
-
-
-export type MutationMergeCategoryBusinessesArgs = {
-  from: _BusinessInput;
-  to: _CategoryInput;
-};
-
-
-export type MutationCreateCategoryArgs = {
-  name: Maybe<Scalars['ID']>;
-};
-
-
-export type MutationDeleteCategoryArgs = {
-  name: Scalars['ID'];
-};
-
-
-export type MutationMergeCategoryArgs = {
-  name: Scalars['ID'];
-};
-
 export type Query = {
   __typename?: 'Query';
-  userCount: Scalars['Int'];
-  ratingsCount: Maybe<Array<Maybe<RatingCount>>>;
-  /** [Generated query](https://grandstack.io/docs/graphql-schema-generation-augmentation#generated-queries) for User type nodes. */
-  User: Maybe<Array<Maybe<User>>>;
-  /** [Generated query](https://grandstack.io/docs/graphql-schema-generation-augmentation#generated-queries) for Business type nodes. */
-  Business: Maybe<Array<Maybe<Business>>>;
-  /** [Generated query](https://grandstack.io/docs/graphql-schema-generation-augmentation#generated-queries) for Review type nodes. */
-  Review: Maybe<Array<Maybe<Review>>>;
-  /** [Generated query](https://grandstack.io/docs/graphql-schema-generation-augmentation#generated-queries) for Category type nodes. */
-  Category: Maybe<Array<Maybe<Category>>>;
+  /** [Generated query](https://grandstack.io/docs/graphql-schema-generation-augmentation#generated-queries) for Property type nodes. */
+  Property: Maybe<Array<Maybe<Property>>>;
 };
 
 
-export type QueryUserArgs = {
-  userId: Maybe<Scalars['ID']>;
-  name: Maybe<Scalars['String']>;
+export type QueryPropertyArgs = {
+  addressLine: Maybe<Scalars['String']>;
+  addressLine1: Maybe<Scalars['String']>;
+  assessment: Maybe<Scalars['String']>;
+  buildingValue: Maybe<Scalars['Int']>;
+  certificate: Maybe<Scalars['String']>;
+  cityState: Maybe<Scalars['String']>;
+  continuous: Maybe<Scalars['Float']>;
+  countyAbbreviation: Maybe<Scalars['String']>;
+  countyName: Maybe<Scalars['String']>;
+  farmsiteArea: Maybe<Scalars['Float']>;
+  forestArea: Maybe<Scalars['Float']>;
+  geometryArea: Maybe<Scalars['Float']>;
+  geometryLength: Maybe<Scalars['Float']>;
+  geometryType: Maybe<Scalars['String']>;
+  grazingArea: Maybe<Scalars['Float']>;
+  irrigatedArea: Maybe<Scalars['Float']>;
+  landValue: Maybe<Scalars['Int']>;
+  legalDescription: Maybe<Scalars['String']>;
+  levyDistrict: Maybe<Scalars['String']>;
+  nonQualityArea: Maybe<Scalars['Float']>;
+  ownerAddress: Maybe<Scalars['String']>;
+  ownerAddressLine1: Maybe<Scalars['String']>;
+  ownerAddressLine2: Maybe<Scalars['String']>;
+  ownerCity: Maybe<Scalars['String']>;
+  ownerName: Maybe<Scalars['String']>;
+  ownerState: Maybe<Scalars['String']>;
+  ownerZip: Maybe<Scalars['String']>;
+  propertyID: Maybe<Scalars['Int']>;
+  range: Maybe<Scalars['String']>;
+  section: Maybe<Scalars['String']>;
+  subdivision: Maybe<Scalars['String']>;
+  taxYear: Maybe<Scalars['Int']>;
+  totalArea: Maybe<Scalars['Float']>;
+  totalValue: Maybe<Scalars['Int']>;
+  township: Maybe<Scalars['String']>;
+  type: Maybe<Scalars['String']>;
+  wildHayArea: Maybe<Scalars['Float']>;
   _id: Maybe<Scalars['String']>;
   first: Maybe<Scalars['Int']>;
   offset: Maybe<Scalars['Int']>;
-  orderBy: Maybe<Array<Maybe<_UserOrdering>>>;
-  filter: Maybe<_UserFilter>;
+  orderBy: Maybe<Array<Maybe<_PropertyOrdering>>>;
+  filter: Maybe<_PropertyFilter>;
+};
+
+export type Mutation = {
+  __typename?: 'Mutation';
+  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#create) for [creating](https://neo4j.com/docs/cypher-manual/4.1/clauses/create/#create-nodes) a Property node. */
+  CreateProperty: Maybe<Property>;
+  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#update) for [updating](https://neo4j.com/docs/cypher-manual/4.1/clauses/set/#set-update-a-property) a Property node. */
+  UpdateProperty: Maybe<Property>;
+  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#delete) for [deleting](https://neo4j.com/docs/cypher-manual/4.1/clauses/delete/#delete-delete-single-node) a Property node. */
+  DeleteProperty: Maybe<Property>;
+  /** [Generated mutation](https://grandstack.io/docs/graphql-schema-generation-augmentation/#merge) for [merging](https://neo4j.com/docs/cypher-manual/4.1/clauses/merge/#query-merge-node-derived) a Property node. */
+  MergeProperty: Maybe<Property>;
 };
 
 
-export type QueryBusinessArgs = {
-  businessId: Maybe<Scalars['ID']>;
-  name: Maybe<Scalars['String']>;
-  address: Maybe<Scalars['String']>;
-  city: Maybe<Scalars['String']>;
-  state: Maybe<Scalars['String']>;
-  location: Maybe<_Neo4jPointInput>;
-  _id: Maybe<Scalars['String']>;
-  first: Maybe<Scalars['Int']>;
-  offset: Maybe<Scalars['Int']>;
-  orderBy: Maybe<Array<Maybe<_BusinessOrdering>>>;
-  filter: Maybe<_BusinessFilter>;
+export type MutationCreatePropertyArgs = {
+  addressLine: Maybe<Scalars['String']>;
+  addressLine1: Maybe<Scalars['String']>;
+  assessment: Maybe<Scalars['String']>;
+  buildingValue: Scalars['Int'];
+  certificate: Maybe<Scalars['String']>;
+  cityState: Maybe<Scalars['String']>;
+  continuous: Scalars['Float'];
+  countyAbbreviation: Scalars['String'];
+  countyName: Scalars['String'];
+  farmsiteArea: Scalars['Float'];
+  forestArea: Scalars['Float'];
+  geometryArea: Scalars['Float'];
+  geometryLength: Scalars['Float'];
+  geometryType: Scalars['String'];
+  grazingArea: Scalars['Float'];
+  irrigatedArea: Scalars['Float'];
+  landValue: Scalars['Int'];
+  legalDescription: Maybe<Scalars['String']>;
+  levyDistrict: Maybe<Scalars['String']>;
+  nonQualityArea: Scalars['Float'];
+  ownerAddress: Maybe<Scalars['String']>;
+  ownerAddressLine1: Maybe<Scalars['String']>;
+  ownerAddressLine2: Maybe<Scalars['String']>;
+  ownerCity: Maybe<Scalars['String']>;
+  ownerName: Maybe<Scalars['String']>;
+  ownerState: Maybe<Scalars['String']>;
+  ownerZip: Maybe<Scalars['String']>;
+  propertyID: Scalars['Int'];
+  range: Maybe<Scalars['String']>;
+  section: Maybe<Scalars['String']>;
+  subdivision: Maybe<Scalars['String']>;
+  taxYear: Scalars['Int'];
+  totalArea: Scalars['Float'];
+  totalValue: Scalars['Int'];
+  township: Maybe<Scalars['String']>;
+  type: Maybe<Scalars['String']>;
+  wildHayArea: Scalars['Float'];
 };
 
 
-export type QueryReviewArgs = {
-  reviewId: Maybe<Scalars['ID']>;
-  stars: Maybe<Scalars['Float']>;
-  text: Maybe<Scalars['String']>;
-  date: Maybe<_Neo4jDateInput>;
-  _id: Maybe<Scalars['String']>;
-  first: Maybe<Scalars['Int']>;
-  offset: Maybe<Scalars['Int']>;
-  orderBy: Maybe<Array<Maybe<_ReviewOrdering>>>;
-  filter: Maybe<_ReviewFilter>;
+export type MutationUpdatePropertyArgs = {
+  addressLine: Maybe<Scalars['String']>;
+  addressLine1: Maybe<Scalars['String']>;
+  assessment: Maybe<Scalars['String']>;
+  buildingValue: Scalars['Int'];
+  certificate: Maybe<Scalars['String']>;
+  cityState: Maybe<Scalars['String']>;
+  continuous: Maybe<Scalars['Float']>;
+  countyAbbreviation: Maybe<Scalars['String']>;
+  countyName: Maybe<Scalars['String']>;
+  farmsiteArea: Maybe<Scalars['Float']>;
+  forestArea: Maybe<Scalars['Float']>;
+  geometryArea: Maybe<Scalars['Float']>;
+  geometryLength: Maybe<Scalars['Float']>;
+  geometryType: Maybe<Scalars['String']>;
+  grazingArea: Maybe<Scalars['Float']>;
+  irrigatedArea: Maybe<Scalars['Float']>;
+  landValue: Maybe<Scalars['Int']>;
+  legalDescription: Maybe<Scalars['String']>;
+  levyDistrict: Maybe<Scalars['String']>;
+  nonQualityArea: Maybe<Scalars['Float']>;
+  ownerAddress: Maybe<Scalars['String']>;
+  ownerAddressLine1: Maybe<Scalars['String']>;
+  ownerAddressLine2: Maybe<Scalars['String']>;
+  ownerCity: Maybe<Scalars['String']>;
+  ownerName: Maybe<Scalars['String']>;
+  ownerState: Maybe<Scalars['String']>;
+  ownerZip: Maybe<Scalars['String']>;
+  propertyID: Maybe<Scalars['Int']>;
+  range: Maybe<Scalars['String']>;
+  section: Maybe<Scalars['String']>;
+  subdivision: Maybe<Scalars['String']>;
+  taxYear: Maybe<Scalars['Int']>;
+  totalArea: Maybe<Scalars['Float']>;
+  totalValue: Maybe<Scalars['Int']>;
+  township: Maybe<Scalars['String']>;
+  type: Maybe<Scalars['String']>;
+  wildHayArea: Maybe<Scalars['Float']>;
 };
 
 
-export type QueryCategoryArgs = {
-  name: Maybe<Scalars['ID']>;
-  _id: Maybe<Scalars['String']>;
-  first: Maybe<Scalars['Int']>;
-  offset: Maybe<Scalars['Int']>;
-  orderBy: Maybe<Array<Maybe<_CategoryOrdering>>>;
-  filter: Maybe<_CategoryFilter>;
+export type MutationDeletePropertyArgs = {
+  buildingValue: Scalars['Int'];
 };
 
-export type RecentReviewsQueryVariables = Exact<{ [key: string]: never; }>;
+
+export type MutationMergePropertyArgs = {
+  addressLine: Maybe<Scalars['String']>;
+  addressLine1: Maybe<Scalars['String']>;
+  assessment: Maybe<Scalars['String']>;
+  buildingValue: Scalars['Int'];
+  certificate: Maybe<Scalars['String']>;
+  cityState: Maybe<Scalars['String']>;
+  continuous: Maybe<Scalars['Float']>;
+  countyAbbreviation: Maybe<Scalars['String']>;
+  countyName: Maybe<Scalars['String']>;
+  farmsiteArea: Maybe<Scalars['Float']>;
+  forestArea: Maybe<Scalars['Float']>;
+  geometryArea: Maybe<Scalars['Float']>;
+  geometryLength: Maybe<Scalars['Float']>;
+  geometryType: Maybe<Scalars['String']>;
+  grazingArea: Maybe<Scalars['Float']>;
+  irrigatedArea: Maybe<Scalars['Float']>;
+  landValue: Maybe<Scalars['Int']>;
+  legalDescription: Maybe<Scalars['String']>;
+  levyDistrict: Maybe<Scalars['String']>;
+  nonQualityArea: Maybe<Scalars['Float']>;
+  ownerAddress: Maybe<Scalars['String']>;
+  ownerAddressLine1: Maybe<Scalars['String']>;
+  ownerAddressLine2: Maybe<Scalars['String']>;
+  ownerCity: Maybe<Scalars['String']>;
+  ownerName: Maybe<Scalars['String']>;
+  ownerState: Maybe<Scalars['String']>;
+  ownerZip: Maybe<Scalars['String']>;
+  propertyID: Maybe<Scalars['Int']>;
+  range: Maybe<Scalars['String']>;
+  section: Maybe<Scalars['String']>;
+  subdivision: Maybe<Scalars['String']>;
+  taxYear: Maybe<Scalars['Int']>;
+  totalArea: Maybe<Scalars['Float']>;
+  totalValue: Maybe<Scalars['Int']>;
+  township: Maybe<Scalars['String']>;
+  type: Maybe<Scalars['String']>;
+  wildHayArea: Maybe<Scalars['Float']>;
+};
+
+export type PropertiesQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type RecentReviewsQuery = (
+export type PropertiesQuery = (
   { __typename?: 'Query' }
-  & { Review: Maybe<Array<Maybe<(
-    { __typename?: 'Review' }
-    & Pick<Review, 'text' | 'stars'>
-    & { user: Maybe<(
-      { __typename?: 'User' }
-      & Pick<User, 'name'>
-    )>, business: Maybe<(
-      { __typename?: 'Business' }
-      & Pick<Business, 'name'>
-    )>, date: Maybe<(
-      { __typename?: '_Neo4jDate' }
-      & Pick<_Neo4jDate, 'formatted'>
-    )> }
+  & { Property: Maybe<Array<Maybe<(
+    { __typename?: 'Property' }
+    & Pick<Property, 'propertyID' | 'addressLine' | 'assessment' | 'totalValue'>
   )>>> }
 );
 
-export type UserCountQueryVariables = Exact<{ [key: string]: never; }>;
 
-
-export type UserCountQuery = (
-  { __typename?: 'Query' }
-  & Pick<Query, 'userCount'>
-);
-
-
-export const RecentReviewsDocument = gql`
-    query RecentReviews {
-  Review(first: 10, orderBy: date_desc) {
-    user {
-      name
-    }
-    business {
-      name
-    }
-    date {
-      formatted
-    }
-    text
-    stars
+export const PropertiesDocument = gql`
+    query Properties {
+  Property(first: 100) {
+    propertyID
+    addressLine
+    assessment
+    totalValue
   }
 }
     `;
 
 /**
- * __useRecentReviewsQuery__
+ * __usePropertiesQuery__
  *
- * To run a query within a React component, call `useRecentReviewsQuery` and pass it any options that fit your needs.
- * When your component renders, `useRecentReviewsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * To run a query within a React component, call `usePropertiesQuery` and pass it any options that fit your needs.
+ * When your component renders, `usePropertiesQuery` returns an object from Apollo Client that contains loading, error, and data properties
  * you can use to render your UI.
  *
  * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
  *
  * @example
- * const { data, loading, error } = useRecentReviewsQuery({
+ * const { data, loading, error } = usePropertiesQuery({
  *   variables: {
  *   },
  * });
  */
-export function useRecentReviewsQuery(baseOptions?: Apollo.QueryHookOptions<RecentReviewsQuery, RecentReviewsQueryVariables>) {
+export function usePropertiesQuery(baseOptions?: Apollo.QueryHookOptions<PropertiesQuery, PropertiesQueryVariables>) {
         const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useQuery<RecentReviewsQuery, RecentReviewsQueryVariables>(RecentReviewsDocument, options);
+        return Apollo.useQuery<PropertiesQuery, PropertiesQueryVariables>(PropertiesDocument, options);
       }
-export function useRecentReviewsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<RecentReviewsQuery, RecentReviewsQueryVariables>) {
+export function usePropertiesLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<PropertiesQuery, PropertiesQueryVariables>) {
           const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useLazyQuery<RecentReviewsQuery, RecentReviewsQueryVariables>(RecentReviewsDocument, options);
+          return Apollo.useLazyQuery<PropertiesQuery, PropertiesQueryVariables>(PropertiesDocument, options);
         }
-export type RecentReviewsQueryHookResult = ReturnType<typeof useRecentReviewsQuery>;
-export type RecentReviewsLazyQueryHookResult = ReturnType<typeof useRecentReviewsLazyQuery>;
-export type RecentReviewsQueryResult = Apollo.QueryResult<RecentReviewsQuery, RecentReviewsQueryVariables>;
-export const UserCountDocument = gql`
-    query UserCount {
-  userCount
-}
-    `;
-
-/**
- * __useUserCountQuery__
- *
- * To run a query within a React component, call `useUserCountQuery` and pass it any options that fit your needs.
- * When your component renders, `useUserCountQuery` returns an object from Apollo Client that contains loading, error, and data properties
- * you can use to render your UI.
- *
- * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
- *
- * @example
- * const { data, loading, error } = useUserCountQuery({
- *   variables: {
- *   },
- * });
- */
-export function useUserCountQuery(baseOptions?: Apollo.QueryHookOptions<UserCountQuery, UserCountQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useQuery<UserCountQuery, UserCountQueryVariables>(UserCountDocument, options);
-      }
-export function useUserCountLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<UserCountQuery, UserCountQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useLazyQuery<UserCountQuery, UserCountQueryVariables>(UserCountDocument, options);
-        }
-export type UserCountQueryHookResult = ReturnType<typeof useUserCountQuery>;
-export type UserCountLazyQueryHookResult = ReturnType<typeof useUserCountLazyQuery>;
-export type UserCountQueryResult = Apollo.QueryResult<UserCountQuery, UserCountQueryVariables>;
+export type PropertiesQueryHookResult = ReturnType<typeof usePropertiesQuery>;
+export type PropertiesLazyQueryHookResult = ReturnType<typeof usePropertiesLazyQuery>;
+export type PropertiesQueryResult = Apollo.QueryResult<PropertiesQuery, PropertiesQueryVariables>;

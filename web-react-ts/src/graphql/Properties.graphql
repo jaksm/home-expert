@@ -1,0 +1,8 @@
+query Properties {
+  Property(first: 100) {
+    propertyID
+    addressLine
+    assessment
+    totalValue
+  }
+}

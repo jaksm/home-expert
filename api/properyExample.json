@@ -1,0 +1,59 @@
+{
+  "type": "Feature",
+  "id": "06121312104010000",
+  "properties": {
+    "COUNTYCD": 6,
+    "CountyName": "Gallatin",
+    "CountyAbbr": "GA",
+    "GISAcres": 0.5923309,
+    "TaxYear": 2021,
+    "PropertyID": 592459,
+    "Assessment": "00RCI13114",
+    "Township": "03 N",
+    "Range": "07 E",
+    "Section": "12",
+    "LegalDescr": "S12, T03 N, R07 E, C.O.S. 1432, ACRES 1.45, PORT OF NW4NW4NE4",
+    "Subdivisio": null,
+    "Certificat": "1432",
+    "AddressLin": null,
+    "AddressL_1": null,
+    "CityStateZ": null,
+    "PropAccess": null,
+    "LevyDistri": "06-0C2734-38-12 34",
+    "PropType": "VAC_R - Vacant Land - Rural",
+    "Continuous": 0.0,
+    "FallowAcre": 0.0,
+    "FarmsiteAc": 0.0,
+    "ForestAcre": 0.0,
+    "GrazingAcr": 1.45,
+    "WildHayAcr": 0.0,
+    "IrrigatedA": 0.0,
+    "NonQualAcr": 0.0,
+    "TotalAcres": 1.45,
+    "TotalBuild": 0,
+    "TotalLandV": 71,
+    "TotalValue": 71,
+    "OwnerName": "RMW RANCH TRUST THE",
+    "OwnerAddre": "30 7TH ST E",
+    "OwnerAdd_1": null,
+    "OwnerAdd_2": null,
+    "OwnerCity": "SAINT PAUL",
+    "OwnerState": "MN",
+    "OwnerZipCo": "55101-4914",
+    "DbaName": null,
+    "CareOfTaxp": null,
+    "SHAPE_Leng": 242.82909012100001,
+    "SHAPE_Area": 2397.0781266099998
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [-110.800857902679624, 46.032495952580199],
+        [-110.801911753841836, 46.031929774785702],
+        [-110.801878861258814, 46.032476592913689],
+        [-110.800857902679624, 46.032495952580199]
+      ]
+    ]
+  }
+}

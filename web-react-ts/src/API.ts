@@ -102,6 +102,8 @@ export enum _PropertyOrdering {
   TypeDesc = 'type_desc',
   WildHayAreaAsc = 'wildHayArea_asc',
   WildHayAreaDesc = 'wildHayArea_desc',
+  EstimatedSalesPriceAsc = 'estimatedSalesPrice_asc',
+  EstimatedSalesPriceDesc = 'estimatedSalesPrice_desc',
   IdAsc = '_id_asc',
   IdDesc = '_id_desc'
 }
@@ -514,6 +516,7 @@ export type Property = {
   township: Maybe<Scalars['String']>;
   type: Maybe<Scalars['String']>;
   wildHayArea: Scalars['Float'];
+  estimatedSalesPrice: Maybe<Scalars['Int']>;
 };
 
 /** Generated Time input object for Neo4j [Temporal field arguments](https://grandstack.io/docs/graphql-temporal-types-datetime/#temporal-query-arguments). */

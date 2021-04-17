@@ -119,6 +119,9 @@ You should be able to see `/web-react-ts/src/API.ts` file with all types and hoo
 
 ### 1. Setup Apollo GraphQL extension (VSCode)
 
+This extension makes VSCode TS Server **really slow** so think about do you really need it?
+Basically it gives you great autocomplete + syntax highlighting + comments when writing `.graphql` files but all of this is present in graphiql at `http://localhost:4001/graphql` or Apollo Client Devtools extension so installing it might be an overkill.
+
 All we need to do here is to create `apollo.config.js` file inside project root folder and paste this config in:
 
 ```js
@@ -128,7 +131,7 @@ module.exports = {
       name: 'home-expert', // name of your app
       localSchemaFile: './api/graphql.schema.json', // path to generated introspection schema
     },
-    includes: ['./web-react-ts/**/*.graphql'], // where are .graphql files?
+    includes: ['./web-react-ts/**/*.{tsx,graphql}'], // apollo graphql extension makes TS server slow af, this is a workaround
   },
 }
 ```

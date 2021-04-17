@@ -1,0 +1,5 @@
+# Write dynamic properties here so they don't get overwritten when inferring schema
+extend type Property {
+  estimatedSalesPrice: Int
+    @cypher(statement: "RETURN toInteger(this.totalValue * 1.2)")
+}

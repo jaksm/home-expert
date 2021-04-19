@@ -1,11 +1,17 @@
+type City {
+  _id: Long!
+  name: String!
+  propertys: [Property] @relation(name: "IN_CITY", direction: IN)
+}
+
 type Property {
   _id: Long!
-  addressLine: String
+  addressLine: String!
   addressLine1: String
-  assessment: String
+  assessment: String!
   buildingValue: Int!
   certificate: String
-  cityState: String
+  cityState: String!
   continuous: Float!
   countyAbbreviation: String!
   countyName: String!
@@ -15,26 +21,30 @@ type Property {
   geometryLength: Float!
   geometryType: String!
   grazingArea: Float!
+  id: String!
   irrigatedArea: Float!
   landValue: Int!
-  legalDescription: String
-  levyDistrict: String
+  legalDescription: String!
+  levyDistrict: String!
+  location: Point
   nonQualityArea: Float!
   ownerAddress: String
   ownerAddressLine1: String
   ownerAddressLine2: String
   ownerCity: String
-  ownerName: String
+  ownerName: String!
   ownerState: String
   ownerZip: String
+  polygon: [Point]
   propertyID: Int!
-  range: String
-  section: String
+  range: String!
+  section: String!
   subdivision: String
   taxYear: Int!
   totalArea: Float!
   totalValue: Int!
-  township: String
-  type: String
+  township: String!
+  type: String!
   wildHayArea: Float!
+  in_city: [City] @relation(name: "IN_CITY", direction: OUT)
 }
